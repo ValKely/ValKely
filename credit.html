@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Credit Analysis on Jumia Products" />
+  <title>Credit Analysis - Jumia Products</title>
+  <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  
+  
+</head>
+<body>
+
+  
+  <nav>
+    <div class="hamburger" id="hamburger" aria-label="Toggle navigation menu" role="button" tabindex="0">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul>
+      <li><a href="#home" class="active"><i class="fas fa-home"></i> Project</a></li>
+      <li><a href="#what-it-solves"><i class="fas fa-lightbulb"></i> What it Solves</a></li>
+      <li><a href="#my-role"><i class="fas fa-user-cog"></i> My Role & Process</a></li>
+      <li><a href="#key-features"><i class="fas fa-star"></i> Key Features</a></li>
+      <li><a href="#tools"><i class="fas fa-wrench"></i> Tools I Used</a></li>
+      <li><a href="#demo-links"><i class="fas fa-link"></i> Demo & Links</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+
+    <!-- Project Overview -->
+    <section id="home" class="content-section">
+      <h2>Credit Card Approval Prediction</h2>
+      <p align="justify">This project addresses the challenge of predicting credit card approvals using machine learning to support financial institutions in managing risk and improving customer satisfaction.</p>
+      <div class="hero-container">
+        <img src="images/crisk2.png" alt="Credit Card Approval Project" class="banner-img" />
+      </div>
+    </section>
+
+    <!-- What It Solves Section -->
+    <section id="what-it-solves" class="content-section">
+      <h2>What it Solves</h2>
+      <div class="card-container">
+        <div class="card">
+          <i class="fas fa-robot" aria-hidden="true"></i>
+          <h4>Automated Credit Decisions</h4>
+          <p>Reduces manual effort and errors in the approval process using predictive models.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-shield-alt" aria-hidden="true"></i>
+          <h4>Risk Management</h4>
+          <p>Helps financial institutions manage risk by identifying potential defaulters early.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-smile" aria-hidden="true"></i>
+          <h4>Improved Customer Experience</h4>
+          <p>Enables quicker and fairer credit card decisions using data-driven insights.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- My Role & Process -->
+    <section id="my-role" class="content-section">
+      <h2>My Role & Process</h2>
+      <div class="process-steps">
+        <div class="step-card">
+          <i class="fas fa-broom" aria-hidden="true"></i>
+          <h4>Data Preprocessing</h4>
+          <p>Cleaned and encoded data by handling missing values and converting categorical features.</p>
+        </div>
+        <div class="step-card">
+          <i class="fas fa-cogs" aria-hidden="true"></i>
+          <h4>Model Building</h4>
+          <p>Used Logistic Regression, Decision Tree, KNN, Random Forest, and XGBoost models.</p>
+        </div>
+        <div class="step-card">
+          <i class="fas fa-vote-yea" aria-hidden="true"></i>
+          <h4>Voting Classifier</h4>
+          <p>Combined predictions of multiple classifiers to improve overall performance.</p>
+        </div>
+        <div class="step-card">
+          <i class="fas fa-balance-scale" aria-hidden="true"></i>
+          <h4>Handling Class Imbalance</h4>
+          <p>Applied SMOTE to balance classes and ensure fairness in prediction.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Features -->
+    <section id="key-features" class="content-section">
+      <h2>Key Features</h2>
+      <div class="tools-list">
+        <div class="tool-card">
+          <i class="fas fa-tools" aria-hidden="true"></i>
+          <h4>Feature Engineering</h4>
+          <p>Converted categorical data, handled missing values, and created a cleaned dataset.</p>
+        </div>
+        <div class="tool-card">
+          <i class="fas fa-chart-pie" aria-hidden="true"></i>
+          <h4>Model Evaluation</h4>
+          <p>Measured accuracy, used cross-validation, and compared classifiers' performance.</p>
+        </div>
+        <div class="tool-card">
+          <i class="fas fa-award" aria-hidden="true"></i>
+          <h4>Best Performing Model</h4>
+          <p>The Voting Classifier achieved 91% accuracy and demonstrated robustness.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tools I Used -->
+    <section id="tools" class="content-section">
+      <h2>Tools I Used</h2>
+      <div class="tools-list">
+        <div class="tool-card">
+          <i class="fab fa-python" aria-hidden="true"></i>
+          <h4>Python</h4>
+          <p>For data preprocessing, model training, and evaluation.</p>
+        </div>
+        <div class="tool-card">
+          <i class="fas fa-database" aria-hidden="true"></i>
+          <h4>Pandas & Scikit-learn</h4>
+          <p>Used for data manipulation, model building, and cross-validation.</p>
+        </div>
+        <div class="tool-card">
+          <i class="fas fa-equals" aria-hidden="true"></i>
+          <h4>SMOTE</h4>
+          <p>Handled class imbalance using oversampling of the minority class.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Demo & Links -->
+    <section id="demo-links" class="content-section demo-links-container">
+      <h2>Demo & Links</h2>
+      <ul>
+        <li>
+          <a href="https://drive.google.com/file/d/1CJTQ3pNs5LW_rIj-BKF2oMgd546N9RRw/view?usp=drive_link" target="_blank"><i class="fas fa-code"></i> Technical Code</a>
+        </li>
+        <li>
+          <a href="https://drive.google.com/file/d/1HV3HlWEkkG5CQ0YRAeqB3HPH1SDoQgiV/view?usp=drive_link" target="_blank"><i class="fas fa-file-csv"></i> Raw Dataset</a>
+        </li>
+        <li>
+          <a href="https://drive.google.com/file/d/1HZigW23wWA0jNCB_RdN5KW90HjTVEOs7/view?usp=sharing" target="_blank"><i class="fas fa-database"></i> Transformed Dataset</a>
+        </li>
+        <li>
+          <a href="https://drive.google.com/file/d/1vgzHZmb-MDOXU5BMGNFIbuwUwMEWtN-x/view?usp=sharing" target="_blank"><i class="fas fa-chart-line"></i> Model Evaluation Dashboard</a>
+        </li>
+        <li>
+          <a href="https://drive.google.com/file/d/1hr84-VkbnyyEjGeYlV9meioVPK7yNkpm/view?usp=drive_link" target="_blank"><i class="fas fa-book"></i> Streamlit Demo App</a>
+        </li>
+        <li>
+          <a href="https://docs.google.com/document/d/1g3Nsg19W2csxQEHPONG5NtKPpcze3R6X/edit?usp=drive_link&ouid=116498847978588288201&rtpof=true&sd=true" target="_blank"><i class="fas fa-book"></i> Documentation</a>
+        </li>
+      </ul>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Credit Card Approval Project. All rights reserved.
+  </footer>
+
+  <script>
+    // Hamburger toggle
+    const hamburger = document.getElementById('hamburger');
+    const navUL = document.querySelector('nav ul');
+    hamburger.addEventListener('click', () => {
+      navUL.classList.toggle('active');
+    });
+   

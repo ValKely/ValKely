@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SQL Crime Data Project</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #e0f0ff 25%, #a0c8ff 75%);
+      min-height: 100vh;
+      color: #003366;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px 20px;
+    }
+
+    .container {
+      background: white;
+      border-radius: 15px;
+      max-width: 900px;
+      width: 100%;
+      box-shadow: 0 15px 40px rgba(0, 64, 128, 0.3);
+      overflow: hidden;
+      padding-bottom: 40px;
+    }
+
+    .summary {
+      background: #004080;
+      padding: 40px 50px;
+      border-bottom: 4px solid #0073e6;
+      color: white;
+      text-align: center;
+    }
+    .summary h1 {
+      font-size: 2.6rem;
+      margin-bottom: 15px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.25);
+    }
+    .summary p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.5;
+      color: #cce6ff;
+      font-weight: 500;
+    }
+
+    .details {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      padding: 35px 50px 0;
+    }
+
+    .card {
+      background: #f0f7ff;
+      border-radius: 12px;
+      padding: 25px 30px;
+      box-shadow: 0 6px 15px rgba(0, 51, 102, 0.1);
+      color: #004080;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0, 51, 102, 0.25);
+    }
+
+    .visual-placeholder {
+      width: 100%;
+      height: 140px;
+      background-color: #cce6ff;
+      border-radius: 12px;
+      margin-bottom: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    .visual-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .card h2 {
+      font-size: 1.4rem;
+      margin-bottom: 14px;
+      font-weight: 700;
+      border-bottom: 2px solid #0073e6;
+      padding-bottom: 6px;
+    }
+
+    .card ul {
+      list-style-type: disc;
+      margin-left: 20px;
+      margin-bottom: 18px;
+      color: #00509e;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+    .card ul li {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #003366;
+    }
+
+    code {
+      background-color: #0073e6;
+      color: #e6f2ff;
+      padding: 3px 7px;
+      border-radius: 5px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .btn {
+      background-color: #0073e6;
+      color: white;
+      text-align: center;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: auto;
+      align-self: center;
+      box-shadow: 0 5px 12px rgba(0, 115, 230, 0.5);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #004080;
+      box-shadow: 0 8px 20px rgba(0, 64, 128, 0.7);
+    }
+
+    @media (max-width: 600px) {
+      .summary h1 {
+        font-size: 2rem;
+      }
+      .summary p {
+        font-size: 1rem;
+      }
+      .details {
+        padding: 25px 30px 0;
+        grid-template-columns: 1fr;
+      }
+      .card {
+        padding: 20px 25px;
+      }
+    }
+     /* Button style */
+    .btn {
+      background-color: #0073e6;
+      color: white;
+      text-align: center;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+      align-self: center;
+      box-shadow: 0 5px 12px rgba(0, 115, 230, 0.5);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #004080;
+      box-shadow: 0 8px 20px rgba(0, 64, 128, 0.7);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header class="summary">
+      <h1>Crime Data Analysis</h1>
+    </header>
+
+    <main class="details">
+      <section id="why" class="card">
+        <div class="visual-placeholder">
+          <img src="images/crime.png" alt="Why this analysis image">
+        </div>
+        <h2>Why this Analysis?</h2>
+        <p align="justify">
+          Crime data quality and insights are essential for law enforcement agencies to effectively allocate resources, detect patterns, and improve public safety. This analysis explores the integrity of the crime dataset and reveals key patterns related to crime types, locations, suspect demographics, and severity to support data-driven decision-making.
+        </p>
+      </section>
+
+      <section id="data-quality" class="card">
+        <div class="visual-placeholder">
+          <img src="images/crime3.png" alt="Data quality visual">
+        </div>
+        <h2>Data Quality &amp; Integrity Checks</h2>
+        <ul>
+          <li>No duplicate records were detected, indicating a clean dataset.</li>
+          <li>All required fields have no missing (null) values, ensuring completeness.</li>
+          <li>Data types and value lengths were verified; no invalid or overly long entries found.</li>
+        </ul>
+      </section>
+
+      <section id="key-insights" class="card">
+        <div class="visual-placeholder">
+          <img src="images/crime4.png">
+        </div>
+        <h2>Key Insights from the Data</h2>
+        <ul>
+          <li><span class="highlight">Crime Types Distribution:</span> Theft is the most prevalent crime, followed by Assault and Fraud.</li>
+          <li><span class="highlight">Location Hotspots:</span> Downtown and Midtown are hotspots with the highest crime occurrences.</li>
+          <li><span class="highlight">Severity Levels:</span> Many crimes are Medium to High severity, needing urgent attention.</li>
+          <li><span class="highlight">Suspect Demographics:</span> The average suspect age is ~29 years, with balanced gender distribution.</li>
+        </ul>
+      </section>
+
+      <section id="recommended-actions" class="card">
+         <div class="visual-placeholder">
+          <img src="images/crime.png" alt="Actions">
+         </div>
+        <h2>Recommended Actions</h2>
+        <ul>
+          <li>Focus enforcement and preventive efforts on Downtown and Midtown hotspots.</li>
+          <li>Develop interventions targeting typical suspect demographics.</li>
+          <li>Prioritize Medium/High severity crimes for resource allocation.</li>
+          <li>Ensure continued data quality with robust validation processes.</li>
+        </ul>
+        <a href="https://drive.google.com/file/d/1YfpPm40cgv7I2ev5koPMco_02nOAzOOD/view?usp=drivesdk" target="_blank" rel="noopener" class="btn">View My Work</a>
+      </section>
+    </main>
+  </div>
+
+</body>
+</html>
