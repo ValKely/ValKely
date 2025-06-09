@@ -70,11 +70,11 @@
       border-bottom: 3px solid transparent;
       transition: border-color 0.3s;
     }
-    nav ul li a.active,
+    
     nav ul li a:hover,
     nav ul li a:focus {
       border-bottom-color:white ;
-      color: black;
+      color: #007bff;
     }
 
     /* Hamburger */
@@ -115,7 +115,7 @@
       }
       nav ul li a:hover,
       nav ul li a:focus {
-        background-color: #3338;
+        background-color: #007bff;
         border-bottom: none;
       }
       .hamburger {
