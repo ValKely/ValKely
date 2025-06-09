@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Using airline feedback as a FinTech & SaaS proxy: sentiment analysis, topic modeling, and customer insights for product-driven growth." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>Customer Voice Modeling | FinTech SaaS Use Case</title>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <ul>
+      <li><a href="#home" class="active"><i class="fas fa-home"></i> Project</a></li>
+      <li><a href="#what-it-solves"><i class="fas fa-lightbulb"></i> Business Impact</a></li>
+      <li><a href="#my-role"><i class="fas fa-user-cog"></i> My Role & Process</a></li>
+      <li><a href="#key-features"><i class="fas fa-star"></i> Features</a></li>
+      <li><a href="#tools"><i class="fas fa-wrench"></i> Tools</a></li>
+      <li><a href="#demo-links"><i class="fas fa-link"></i> Demo & Links</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main -->
+  <div class="container">
+    <!-- Overview -->
+    <section id="home" class="content-section">
+      <h2>How I Helped British Airways Listen to the Voice of the Customer</h2>
+      <p>In B2C fintech and SaaS environments, real user feedback can make or break product success. This NLP-driven project dives into thousands of British Airways reviews, uncovering emotional cues and behavioral signals — powering smarter CX and retention strategies.</p>
+      <div class="hero-container">
+        <img src="images/Screenshot 2025-05-14 084026.png" alt="BA Overview" class="banner-img" width="300" height="300"/>
+        <img src="images/B1.jpg" alt="BA Reviews" class="banner-img" width="300" height="300"/>
+      </div>
+    </section>
+
+    <!-- Problem -->
+    <section id="what-it-solves" class="content-section">
+      <h2>Business Impact</h2>
+      <div class="card-container">
+        <div class="card">
+          <i class="fas fa-comment-dots"></i>
+          <h4>Unstructured Feedback</h4>
+          <p>
+            Just like airline reviews, FinTech & SaaS platforms receive massive feedback across help desks, app stores, and social media—largely unstructured.
+          </p>
+        </div>
+        <div class="card">
+          <i class="fas fa-search"></i>
+          <h4>Signal vs Noise</h4>
+          <p>
+            Customers often repeat the same frustrations. This project uses topic modeling and sentiment to group these pain points—mirroring issue triage in FinTech apps.
+          </p>
+        </div>
+        <div class="card">
+          <i class="fas fa-chart-pie"></i>
+          <h4>Actionable Intelligence</h4>
+          <p>
+            Insights generated here can inform real-time personalization, prioritization of features, and automation of ticket routing in SaaS support workflows.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Role -->
+    <section id="my-role" class="content-section">
+      <h2>My Role: NLP-Powered Customer Whisperer</h2>
+      <div class="process-steps">
+        <div class="step-card">
+          <i class="fas fa-code"></i>
+          <h4>Scraping the Raw Voice</h4>
+          <p>
+            Built a BeautifulSoup scraper pipeline to extract live reviews—this mirrors the setup for collecting open-text customer input in FinTech apps.
+          </p>
+        </div>
+        <div class="step-card">
+          <i class="fas fa-broom"></i>
+          <h4>Preprocessing for Clarity</h4>
+          <p>
+            Used Pandas & Regex to clean messy real-world data (emojis, casing, spelling)—a critical first step in analyzing user feedback at scale.
+          </p>
+        </div>
+        <div class="step-card">
+          <i class="fas fa-smile"></i>
+          <h4>Sentiment Scoring</h4>
+          <p>
+            Used TextBlob to assign polarity (-1 to +1). This mirrors how SaaS companies infer user happiness beyond stars or emojis.
+          </p>
+        </div>
+        <div class="step-card">
+          <i class="fas fa-brain"></i>
+          <h4>Theme Detection</h4>
+          <p>
+            Used LDA topic modeling to extract recurring complaints & praises—ideal for roadmap planning and NPS follow-up strategies.
+          </p>
+        </div>
+      </div>
+    </section>
+     <!-- Key Features -->
+    <section id="key-features" class="content-section">
+      <h2>Features That Drive Business Results</h2>
+      <div class="tools-list">
+        <div class="tool-card">
+          <i class="fas fa-bullseye"></i>
+          <h4>Emotion Scoring</h4>
+          <p>Each review is scored on a sentiment scale, making emotion quantifiable and actionable </p>
+        </div>
+        <div class="tool-card">
+          <i class="fas fa-balance-scale"></i>
+          <h4>Theme Clustering</h4>
+          <p>LDA groups feedback into clear themes, helping teams prioritize improvements—just like backlog grooming in SaaS development.</p>
+        </div>
+        <div class="tool-card">
+          <i class="fas fa-chart-bar"></i>
+          <h4>Visual Insight Dashboards</h4>
+          <p>Word clouds and charts turn raw text into compelling visuals — ideal for stakeholder presentations or CX dashboards.</p>
+        </div>
+        
+      </div>
+    </section>
+
+    
+
+   <!-- Tools -->
+    <section id="tools" class="content-section">
+      <h2>Tools I Used</h2>
+      <div class="tools-list">
+        <div class="tool-card">
+          <i class="fas fa-python"></i><h4>Python</h4><p>Core language for scraping and cleaning feedback data.</p>
+        </div>
+        <div class="tool-card">
+          <i class="fas fa-database"></i><h4>BeautifulSoup</h4><p>Scraped customer reviews from online sources.</p>
+        </div>
+        <div class="tool-card">
+          <i class="fas fa-chart-bar"></i><h4>Pandas</h4><p>Cleaned and structured data for analysis.</p>
+        </div>
+        <div class="tool-card">
+          <i class="fas fa-code"></i><h4>Regex</h4><p>Refined text data by removing noise and irrelevant characters.</p>
+        </div>
+        <div class="tool-card">
+          <i class="fas fa-smile"></i><h4>TextBlob</h4><p>Extracted sentiment polarity and subjectivity.</p>
+        </div>
+        <div class="tool-card">
+          <i class="fas fa-brain"></i><h4>LDA (Gensim)</h4><p>Discovered key themes within the dataset.</p>
+        </div>
+        <div class="tool-card">
+          <i class="fas fa-chart-bar"></i><h4>Matplotlib</h4><p>Created trend and distribution charts.</p>
+        </div>
+        <div class="tool-card">
+          <i class="fas fa-cloud"></i><h4>WordCloud</h4><p>Visualized the most common terms for easy interpretation.</p>
+        </div>
+      </div>
+    </section>
+    <!-- Demo -->
+    <section id="demo-links" class="content-section">
+      <h2>Demo & Links</h2>
+      <div class="demo-links-container">
+        <ul>
+           <li>
+          <a href="https://drive.google.com/file/d/1CJTQ3pNs5LW_rIj-BKF2oMgd546N9RRw/view?usp=drive_link" target="_blank"><i class="fas fa-code"></i> Technical Code</a>
+        </li>
+        <li>
+          <a href="https://drive.google.com/file/d/1HV3HlWEkkG5CQ0YRAeqB3HPH1SDoQgiV/view?usp=drive_link" target="_blank"><i class="fas fa-file-csv"></i> Raw Dataset</a>
+        </li>
+        <li>
+          <a href="https://drive.google.com/file/d/1HZigW23wWA0jNCB_RdN5KW90HjTVEOs7/view?usp=sharing" target="_blank"><i class="fas fa-database"></i> Transformed Dataset</a>
+        </li>
+        <li>
+          <a href="https://drive.google.com/file/d/1vgzHZmb-MDOXU5BMGNFIbuwUwMEWtN-x/view?usp=sharing" target="_blank"><i class="fas fa-chart-line"></i> Model Evaluation Dashboard</a>
+        </li>
+        <li>
+          <a href="https://drive.google.com/file/d/1hr84-VkbnyyEjGeYlV9meioVPK7yNkpm/view?usp=drive_link" target="_blank"><i class="fas fa-book"></i> Streamlit Demo App</a>
+        </li>
+        <li>
+          <a href="https://docs.google.com/document/d/1g3Nsg19W2csxQEHPONG5NtKPpcze3R6X/edit?usp=drive_link&ouid=116498847978588288201&rtpof=true&sd=true" target="_blank"><i class="fas fa-book"></i> Documentation</a>
+        </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Kelechukwu Valerie – FinTech Voice of the Customer Project
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.querySelector('nav ul');
+    hamburger.addEventListener('click', () => navMenu.classList.toggle('active'));
+    document.querySelectorAll('nav ul li a').forEach(link => {
+      link.addEventListener('click', () => navMenu.classList.remove('active'));
+    });
+  </script>
+</body>
+</html>
